@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../store/authStore';
-import { User, LogOut, Menu, X, Code, Users, Trophy } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const { user, isAuthenticated, logout } = useAuthStore();
@@ -25,7 +24,7 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
-              <Code className="h-8 w-8 text-primary-600" />
+              <span className="text-2xl">🧠</span>
               <span className="text-2xl font-bold text-gray-900">MindGym</span>
             </Link>
           </div>
@@ -52,14 +51,14 @@ const Navbar: React.FC = () => {
                     to="/profile"
                     className="flex items-center space-x-2 text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                   >
-                    <User className="h-4 w-4" />
+                    <span>👤</span>
                     <span>{user?.username}</span>
                   </Link>
                   <button
                     onClick={handleLogout}
                     className="flex items-center space-x-2 text-gray-700 hover:text-error-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                   >
-                    <LogOut className="h-4 w-4" />
+                    <span>🚪</span>
                     <span>Logout</span>
                   </button>
                 </div>
@@ -88,7 +87,7 @@ const Navbar: React.FC = () => {
               onClick={toggleMenu}
               className="text-gray-700 hover:text-primary-600 p-2 rounded-md transition-colors"
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? '✕' : '☰'}
             </button>
           </div>
         </div>
