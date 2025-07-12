@@ -30,9 +30,9 @@ npm run seed
 echo "✅ Database seeded with sample data"
 
 # Setup frontend
-echo "🎨 Setting up frontend..."
+echo "🎨 Setting up frontend (Vite)..."
 cd ../frontend
-npm install
+npm install --legacy-peer-deps
 echo "✅ Frontend dependencies installed"
 
 echo ""
@@ -40,7 +40,7 @@ echo "🎉 MindGym setup complete!"
 echo ""
 echo "To start the application:"
 echo "1. Backend: cd backend && npm run dev"
-echo "2. Frontend: cd frontend && npm start"
+echo "2. Frontend: cd frontend && npm run dev"
 echo ""
 echo "Default login credentials:"
 echo "Admin: admin@mindgym.com / admin123"

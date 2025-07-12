@@ -24,6 +24,7 @@ A LeetCode-like platform focused on Python-based algorithm and data structure pr
 
 ### Frontend
 - **React** with TypeScript
+- **Vite** for fast development and building
 - **Tailwind CSS** for styling
 - **Monaco Editor** for code editing
 - **Zustand** for state management
@@ -48,7 +49,7 @@ mindgym/
 │   ├── services/        # Business logic
 │   ├── scripts/         # Utility scripts
 │   └── utils/           # Helper utilities
-├── frontend/            # React frontend
+├── frontend/            # React frontend (Vite)
 │   ├── public/          # Static files
 │   ├── src/
 │   │   ├── api/         # API client
@@ -115,12 +116,12 @@ mindgym/
 1. **Install frontend dependencies**
    ```bash
    cd frontend
-   npm install
+   npm install --legacy-peer-deps
    ```
 
 2. **Start the development server**
    ```bash
-   npm start
+   npm run dev
    ```
 
 3. **Access the application**
@@ -183,7 +184,7 @@ ADMIN_PASSWORD=admin123
 
 **Frontend (.env)**
 ```bash
-REACT_APP_API_URL=http://localhost:5000/api
+VITE_API_URL=http://localhost:5000/api
 ```
 
 ## 🧪 Testing
@@ -197,7 +198,7 @@ npm test
 ### Frontend Tests
 ```bash
 cd frontend
-npm test
+npm run test
 ```
 
 ## 🐳 Docker Deployment
@@ -246,6 +247,7 @@ docker run -d -p 3000:3000 mindgym-frontend
 - **CPU Limits**: 50% CPU quota per container
 - **Network Isolation**: No network access during execution
 - **Auto-cleanup**: Temporary files and containers
+- **Fast Development**: Vite HMR for instant updates
 
 ## 🤝 Contributing
 
@@ -263,6 +265,7 @@ docker run -d -p 3000:3000 mindgym-frontend
 - [x] Code submission and judging
 - [x] User profiles and statistics
 - [x] Admin panel
+- [x] Vite migration for faster development
 
 ### Phase 2
 - [ ] Advanced code editor features
